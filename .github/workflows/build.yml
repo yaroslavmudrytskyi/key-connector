@@ -10,7 +10,7 @@ on:
 jobs:
   cloc:
     name: CLOC
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout repo
         uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab # v3.5.2
@@ -27,7 +27,7 @@ jobs:
 
   build-artifacts:
     name: Build artifacts
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout repo
         uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab # v3.5.2
@@ -68,7 +68,7 @@ jobs:
 
   build-docker:
     name: Build Docker images
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     needs: build-artifacts
     env:
       _SERVICE_NAME: key-connector
